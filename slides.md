@@ -1,10 +1,158 @@
 <!-- Treat as reveal.js with no part slides (heading 1 is a new slide) -->
 
+<style>
+:root {
+  --hadron-bg-1: #060a14;
+  --hadron-bg-2: #0d1730;
+  --hadron-text: #edf2ff;
+  --hadron-muted: #b7c5e6;
+  --hadron-cyan: #10c6ea;
+  --hadron-magenta: #ff2d9a;
+  --hadron-yellow: #f4e54b;
+}
+
+.reveal {
+  color: var(--hadron-text);
+  font-family: "Inter", "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 34px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 0.4em 0.8em 0.6em 0.8em;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(16, 198, 234, 0.12), transparent 23%),
+    radial-gradient(circle at 88% 18%, rgba(255, 45, 154, 0.11), transparent 24%),
+    radial-gradient(circle at 82% 84%, rgba(244, 229, 75, 0.08), transparent 18%),
+    linear-gradient(145deg, var(--hadron-bg-1) 0%, var(--hadron-bg-2) 100%);
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4em;
+}
+
+.reveal h1 { font-size: 1.55em; }
+.reveal h2 { font-size: 1.2em; }
+
+.reveal p, .reveal li {
+  color: var(--hadron-text);
+  line-height: 1.28;
+}
+
+.reveal strong { color: #ffffff; }
+
+.reveal ul, .reveal ol {
+  display: block;
+  margin-left: 0.8em;
+}
+
+.reveal pre {
+  width: 100%;
+  margin: 0.35em 0 0.55em 0;
+  box-shadow: none;
+}
+
+.reveal pre code {
+  max-height: 420px;
+  padding: 0.75em 0.9em;
+  font-size: 0.74em;
+  line-height: 1.3;
+  color: #eff5ff;
+  background: rgba(10, 16, 32, 0.9);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+}
+
+.reveal code {
+  color: #cfe3ff;
+}
+
+.reveal img {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.reveal blockquote {
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.5em 0.8em;
+  color: var(--hadron-text);
+  background: rgba(255,255,255,0.06);
+  border-left: 4px solid var(--hadron-cyan);
+  box-shadow: none;
+}
+
+.title-slide {
+  margin-top: 0.3em;
+}
+
+.title-slide .org {
+  margin-bottom: 0.6em;
+  font-size: 0.56em;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #a9c4ff;
+}
+
+.title-slide .title-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.95fr;
+  gap: 1.1em;
+  align-items: center;
+}
+
+.title-slide .meta {
+  margin-top: 1.2em;
+  font-size: 0.63em;
+  line-height: 1.45;
+  color: var(--hadron-muted);
+}
+
+.title-slide .logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+  padding: 0.7em 0.9em;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 22px;
+}
+
+.title-slide .hadron-logo {
+  width: 100%;
+  max-width: 470px;
+}
+
+.reveal hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+</style>
+
 # Interesting AI
 
-Sam Hartman
-
-October 30, 2026
+<div class="title-slide">
+  <div class="org">Hadron Industries</div>
+  <div class="title-grid">
+    <div class="title-copy">
+      <div class="meta">
+        <strong>Sam Hartman</strong><br>
+        October 30, 2026
+      </div>
+    </div>
+    <div class="logo-card">
+      <img class="hadron-logo" alt="Hadron Industries logo" src="hadron-logo.png">
+    </div>
+  </div>
+</div>
 
 # How LLMs Predict the Next Token
 
