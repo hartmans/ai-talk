@@ -1,3 +1,8 @@
+---
+title: Interesting AI
+revealjs-url: 'https://unpkg.com/reveal.js@4.1.0'
+---
+
 <!-- Treat as reveal.js with no part slides (heading 1 is a new slide) -->
 
 <style>
