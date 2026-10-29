@@ -1,6 +1,6 @@
-Treat as reveal.js with no part slides (heading 1 is a new slide)
+<!-- Treat as reveal.js with no part slides (heading 1 is a new slide) -->
 
-## Interesting AI
+# Interesting AI
 
 Sam Hartman
 
