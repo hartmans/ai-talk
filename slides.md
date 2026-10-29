@@ -30,9 +30,9 @@ input = t('Python is a ', return_tensors='pt')
 input = {k:v.to('cuda') for k,v in input.items()}
 ```
 
-The tokenizer makes PyTorch tensors; the second line moves them to the same GPU as the model.
+The tokenizer makes PyTorch tensors, then we move them to the model's GPU. Token boundaries are not necessarily word boundaries; inspect them with `t.convert_ids_to_tokens(input['input_ids'][0].tolist())`.
 
-# Calling the model: output shape
+# Calling the model: why four positions?
 
 ```python
 output = m(**input)
@@ -40,11 +40,13 @@ output.logits.shape
 # torch.Size([1, 4, 262144])
 ```
 
-- **1**: one input sequence (batch size).
-- **4**: four token positions in that sequence.
-- **262,144**: one score for each possible token ID at every position.
+The tokenizer produced **four input token IDs** from `'Python is a '` (tokens are not necessarily words).
 
-This is one forward pass, **not** a generated sentence.
+- **1**: one input sequence.
+- **4**: one position per input token. Each position sees its prefix and scores the *following* token.
+- **262,144**: one score for every possible next token at each position.
+
+**One forward pass computes all four positions.** The last one, `output.logits[0, -1]`, predicts what comes **after the entire prompt**.
 
 # What are logits?
 
