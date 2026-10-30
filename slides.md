@@ -283,3 +283,14 @@ From one prompt, two continuations branch off. ORPO trains the model to prefer t
 # Looking Deeper at the model
 
 <img src="transformer-hidden-state.svg" class="training-landscape-image" alt="A decoder-only transformer flowing left to right: token IDs, token embeddings, repeated transformer blocks with causal self-attention and feed-forward networks, final normalization, and the LLM head projecting to vocabulary logits. Final norm is labeled as the last layer before the head. Its output, the final hidden state, is highlighted as one contextual vector per token.">
+
+# What is the Hidden State
+
+The LLM head outputs the logits we saw before.
+
+But what about the *final hidden state?*
+It captures what the model is thinking after it has considered (and **attended to**) the entire prompt. In anthropomorphic terms, it's what is on the model's mind just before the prediction.
+
+# Vector Search
+
+<img src="embedding-similarity-training.svg" class="training-landscape-image" alt="Before and after similarity training. Initially, final-state vectors for related concepts are scattered. Training updates the model weights so dog and puppy, coffee and espresso, and source code and software form three separate nearby pairs. Each point represents the final-token hidden state for a prompt about that concept. This is a schematic two-dimensional view of a high-dimensional vector space.">

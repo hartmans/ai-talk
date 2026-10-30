@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+<title id="title">Training shapes the space of final hidden states</title>
+<desc id="desc">Before similarity training, related concepts are scattered. After training, dog and puppy, coffee and espresso, and source code and software form three separate groups. Each point represents the final-token hidden state for a prompt; this is a schematic two-dimensional view.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#b7c5e6"/></marker></defs>
+<rect width="1600" height="820" rx="24" fill="#0b1427"/>
+<text x="800" y="65" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#b7c5e6">TRAINING SHAPES THE FINAL HIDDEN STATE</text>
+<text x="355" y="134" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#edf2ff">Before similarity training</text>
+<text x="1245" y="134" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#edf2ff">After similarity training</text>
+<rect x="55" y="165" width="600" height="440" rx="20" fill="#111f35" stroke="#345478" stroke-width="2"/>
+<rect x="945" y="165" width="600" height="440" rx="20" fill="#111f35" stroke="#345478" stroke-width="2"/>
+<circle cx="175" cy="265" r="10" fill="#10c6ea"/>
+<text x="175" y="241" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#10c6ea">dog</text>
+<circle cx="495" cy="500" r="10" fill="#10c6ea"/>
+<text x="495" y="543" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#10c6ea">puppy</text>
+<circle cx="440" cy="270" r="10" fill="#f4e54b"/>
+<text x="440" y="246" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#f4e54b">coffee</text>
+<circle cx="220" cy="495" r="10" fill="#f4e54b"/>
+<text x="220" y="538" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#f4e54b">espresso</text>
+<circle cx="355" cy="390" r="10" fill="#ff62b4"/>
+<text x="355" y="366" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#ff62b4">source code</text>
+<circle cx="535" cy="390" r="10" fill="#ff62b4"/>
+<text x="535" y="366" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#ff62b4">software</text>
+<ellipse cx="1090" cy="290" rx="126" ry="83" fill="#10c6ea" fill-opacity="0.07" stroke="#10c6ea" stroke-opacity="0.5" stroke-width="2"/>
+<ellipse cx="1390" cy="300" rx="126" ry="83" fill="#f4e54b" fill-opacity="0.07" stroke="#f4e54b" stroke-opacity="0.5" stroke-width="2"/>
+<ellipse cx="1230" cy="495" rx="126" ry="83" fill="#ff62b4" fill-opacity="0.07" stroke="#ff62b4" stroke-opacity="0.5" stroke-width="2"/>
+<path d="M1055 275 L1125 310" stroke="#10c6ea" stroke-width="3" fill="none"/>
+<circle cx="1055" cy="275" r="10" fill="#10c6ea"/>
+<text x="1055" y="251" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#10c6ea">dog</text>
+<circle cx="1125" cy="310" r="10" fill="#10c6ea"/>
+<text x="1125" y="349" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#10c6ea">puppy</text>
+<path d="M1355 285 L1425 320" stroke="#f4e54b" stroke-width="3" fill="none"/>
+<circle cx="1355" cy="285" r="10" fill="#f4e54b"/>
+<text x="1355" y="261" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#f4e54b">coffee</text>
+<circle cx="1425" cy="320" r="10" fill="#f4e54b"/>
+<text x="1425" y="359" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#f4e54b">espresso</text>
+<path d="M1195 480 L1265 515" stroke="#ff62b4" stroke-width="3" fill="none"/>
+<circle cx="1195" cy="480" r="10" fill="#ff62b4"/>
+<text x="1195" y="456" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#ff62b4">source code</text>
+<circle cx="1265" cy="515" r="10" fill="#ff62b4"/>
+<text x="1265" y="554" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#ff62b4">software</text>
+<text x="800" y="290" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#edf2ff">Train on</text>
+<text x="800" y="331" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#edf2ff">similarity</text>
+<path d="M695 380 L905 380" stroke="#b7c5e6" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="800" y="440" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">Update the</text>
+<text x="800" y="473" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">model weights</text>
+<text x="355" y="650" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#b7c5e6">Related concepts can be far apart</text>
+<text x="1245" y="650" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#edf2ff">Similar concepts → nearby vectors</text>
+<text x="800" y="727" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#edf2ff">Each point: the final-token hidden state for a prompt about that concept.</text>
+<text x="800" y="771" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#b7c5e6">Schematic 2D view of a high-dimensional vector space.</text>
+</svg>
