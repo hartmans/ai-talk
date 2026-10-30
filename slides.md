@@ -28,7 +28,7 @@ October 30, 2026
 
 # How LLMs Predict the Next Token
 
-![Two-panel diagram explaining next-token prediction for “2 + 2 = 4”. Panel 1 is titled “Step 1: Before ‘=’.” It shows input tokens 2, plus, 2 flowing into a box labeled LLM. To the right is a vertical list titled “Next-token probabilities,” where the token “=” has the highest probability (about 0.65) and several other tokens such as plus, period, digit 2, and <newline> have smaller probabilities. Panel 2 is titled “Step 2: After ‘=’.” It shows tokens 2, plus, 2, equals flowing into the LLM box. The output side shows next-token probabilities where “4” has very high probability (around 0.92) and alternative tokens like 3, 22, and 5 have much lower probabilities. At the bottom, an example output sequence 2 + 4 is shown, with a caption explaining that once the “=” token is included the LLM predicts the result with high probability.](llm-next-token-prediction.png) 
+<img src="llm-next-token-prediction.png" class="training-landscape-image" alt="Two-panel diagram explaining next-token prediction for “2 + 2 = 4”. Panel 1 is titled “Step 1: Before ‘=’.” It shows input tokens 2, plus, 2 flowing into a box labeled LLM. To the right is a vertical list titled “Next-token probabilities,” where the token “=” has the highest probability (about 0.65) and several other tokens such as plus, period, digit 2, and <newline> have smaller probabilities. Panel 2 is titled “Step 2: After ‘=’.” It shows tokens 2, plus, 2, equals flowing into the LLM box. The output side shows next-token probabilities where “4” has very high probability (around 0.92) and alternative tokens like 3, 22, and 5 have much lower probabilities. At the bottom, an example output sequence 2 + 4 is shown, with a caption explaining that once the “=” token is included the LLM predicts the result with high probability.">
 
 # Loading a model
 ```python
@@ -262,6 +262,7 @@ What CI buys us:
 - **An eval harness** — `eval.py` proves the model improved.
 
 Source: [ci_sft.yml](https://gitlab.suchdamage.org/hartmans-ai/ai-tools/-/blob/master/training_tools/ci_sft.yml)
+
 # SFT's blind spot
 
 <img src="orpo_vs_sft.png" class="training-landscape-image" alt="The predicted-token landscape after SFT. From a single branch point, three continuations diverge: a cyan chosen path rising to a peak, a magenta rejected path, and a white path for other continuations. SFT lifts the chosen path, but the rejected and other paths remain on attractive terrain. Without negative examples, SFT does not say which alternatives are bad, so undesirable continuations may stay likely.">
