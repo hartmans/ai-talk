@@ -1,0 +1,55 @@
+name: Build and deploy talk pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pandoc
+        run: sudo apt-get update -y && sudo apt-get install -y pandoc
+
+      - name: Build talk.html
+        run: make
+
+      - name: Prepare site
+        run: |
+          mkdir -p site
+          cp talk.html site/index.html
+          # Copy every image in the repo, preserving relative paths, so
+          # images added later (including in subdirectories) are published
+          # without changing this workflow.
+          find . -type f \
+            \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \
+               -o -name '*.gif' -o -name '*.webp' -o -name '*.svg' \) \
+            -not -path './.git/*' -not -path './site/*' -print0 |
+          while IFS= read -r -d '' f; do
+            rel="${f#./}"
+            dest="site/$(dirname "$rel")"
+            mkdir -p "$dest"
+            cp "$f" "$dest/"
+          done
+          find site -type f | sort
+
+      - name: Configure pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
