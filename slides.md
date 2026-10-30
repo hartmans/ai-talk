@@ -205,6 +205,7 @@ training_args.learning_rate = 1e-5
 
 Source: [modeling.py](https://gitlab.suchdamage.org/hartmans-ai/ai-tools/-/blob/master/hartmans_ai/modeling.py)
 
+
 # Why training is a memory hog
 
 Training is not just the model's weights. Per step we must hold **weights**, **gradients** (one per weight), **optimizer state** (Adam's two statistics per weight), and **activations** (everything backprop needs).
@@ -261,3 +262,21 @@ What CI buys us:
 - **An eval harness** — `eval.py` proves the model improved.
 
 Source: [ci_sft.yml](https://gitlab.suchdamage.org/hartmans-ai/ai-tools/-/blob/master/training_tools/ci_sft.yml)
+# SFT's blind spot
+
+<img src="orpo_vs_sft.png" class="training-landscape-image" alt="The predicted-token landscape after SFT. From a single branch point, three continuations diverge: a cyan chosen path rising to a peak, a magenta rejected path, and a white path for other continuations. SFT lifts the chosen path, but the rejected and other paths remain on attractive terrain. Without negative examples, SFT does not say which alternatives are bad, so undesirable continuations may stay likely.">
+
+# ORPO moves in both directions
+
+<img src="orpo_reshape.png" class="training-landscape-image" alt="The predicted-token landscape after ORPO. From the same branch point, the cyan chosen path is raised while the magenta rejected path is pushed down, so the two move apart. ORPO favors the chosen continuation relative to the rejected one and directly targets the rejected alternative, moving the surface toward one direction and away from the other.">
+
+# What's in an ORPO dataset
+
+An ORPO example is a preference pair — three pieces:
+
+- **Prompt** — the set of conversation rounds, **shared** between the two paths. It is the branch point in the landscape, the same starting point for both.
+- **Chosen** — the preferred set of rounds, the continuation to favor.
+- **Rejected** — the dispreferred set of rounds, the continuation to suppress.
+
+From one prompt, two continuations branch off. ORPO trains the model to prefer the chosen one *relative to* the rejected one, so the surface moves toward the chosen and away from the rejected at the same time.
+
