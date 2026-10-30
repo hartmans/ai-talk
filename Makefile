@@ -3,7 +3,7 @@
 .PHONY: all clean
 all: talk.html
 
-talk.html: slides.md hadron.css hadron-logo.png llm-next-token-prediction.png
+talk.html: slides.md hadron.css hadron-logo.png llm-next-token-prediction.png sft_before.png sft_after_training.png
 	pandoc --standalone --to=revealjs --slide-level=1 --embed-resources slides.md -o $@
 
 clean:

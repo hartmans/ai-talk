@@ -104,3 +104,11 @@ Prompt: `Python is a `
 The candidates are in descending score order. Spaces and newlines matter: `' Python'` starts with a space, while `'\n'` and `'\n\n'` represent line breaks.
 
 These are **alternatives for a single next token**, not a ten-token continuation.
+
+# SFT: Before training
+
+<img src="sft_before.png" class="training-landscape-image" alt="Before training: A cyan training-example path crosses a three-dimensional blue probability landscape. The model's magenta preferred continuation initially follows the example, then diverges into a different valley when it favors another next token.">
+
+# SFT: After training
+
+<img src="sft_after_training.png" class="training-landscape-image" alt="After training: The cyan example follows the same route, but the landscape has changed. A new valley favors the desired continuation, while the old magenta preference is shown faintly on raised terrain. The example stays fixed while training adjusts the model.">

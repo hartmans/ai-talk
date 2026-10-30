@@ -135,3 +135,12 @@
   border: none;
   border-top: 1px solid rgba(255,255,255,0.12);
 }
+
+/* Keep the paired training illustrations within the slide while retaining their aspect ratio. */
+.reveal .slides section img.training-landscape-image {
+  display: block;
+  width: 95%;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 0.15em auto 0;
+}
