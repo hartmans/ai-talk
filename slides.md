@@ -50,7 +50,7 @@ input = t('Python is a ', return_tensors='pt')
 input = {k:v.to('cuda') for k,v in input.items()}
 ```
 
-The tokenizer makes PyTorch tensors, then we move them to the model's GPU. Token boundaries are not necessarily word boundaries; inspect them with `t.convert_ids_to_tokens(input['input_ids'][0].tolist())`.
+The tokenizer makes PyTorch tensors, then we move them to the model's GPU. Token boundaries are not necessarily word boundaries; inspect them with `t.convert_ids_to_tokens`.
 
 # Calling the model: why four positions?
 
