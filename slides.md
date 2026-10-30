@@ -280,3 +280,6 @@ An ORPO example is a preference pair — three pieces:
 
 From one prompt, two continuations branch off. ORPO trains the model to prefer the chosen one *relative to* the rejected one, so the surface moves toward the chosen and away from the rejected at the same time.
 
+# Looking Deeper at the model
+
+<img src="transformer-hidden-state.svg" class="training-landscape-image" alt="A decoder-only transformer flowing left to right: token IDs, token embeddings, repeated transformer blocks with causal self-attention and feed-forward networks, final normalization, and the LLM head projecting to vocabulary logits. Final norm is labeled as the last layer before the head. Its output, the final hidden state, is highlighted as one contextual vector per token.">

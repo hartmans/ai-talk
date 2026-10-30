@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc"><title id="title">Inside a decoder-only transformer</title><desc id="desc">Token embeddings flow through repeated transformer blocks and final normalization. The final hidden state is a contextual vector per token, passed to the LLM head to produce vocabulary logits.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#b7c5e6"/></marker></defs><rect width="1600" height="820" rx="24" fill="#0b1427"/>
+<text x="800" y="68" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">DECODER-ONLY TRANSFORMER · LEFT TO RIGHT</text>
+<rect x="30" y="285" width="150" height="170" rx="14" fill="#14243e" stroke="#10c6ea" stroke-width="3"/>
+<text x="105" y="352" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#edf2ff">Token</text>
+<text x="105" y="392" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#edf2ff">IDs</text>
+<rect x="230" y="285" width="200" height="170" rx="14" fill="#14243e" stroke="#10c6ea" stroke-width="3"/>
+<text x="330" y="350" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#edf2ff">Token</text>
+<text x="330" y="393" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#edf2ff">embeddings</text>
+<rect x="505" y="165" width="330" height="410" rx="14" fill="#14243e" stroke="#10c6ea" stroke-width="3"/>
+<rect x="495" y="175" width="330" height="410" rx="14" fill="#14243e" stroke="#10c6ea" stroke-width="3"/>
+<rect x="485" y="185" width="330" height="410" rx="14" fill="#14243e" stroke="#10c6ea" stroke-width="3"/>
+<text x="650" y="232" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#edf2ff">Transformer block</text>
+<rect x="510" y="270" width="280" height="90" rx="14" fill="#214362" stroke="#10c6ea" stroke-width="3"/>
+<text x="650" y="307" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#edf2ff">Causal</text>
+<text x="650" y="341" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#edf2ff">self-attention</text>
+<path d="M650 365 V402" fill="none" stroke="#b7c5e6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="510" y="415" width="280" height="65" rx="14" fill="#214362" stroke="#10c6ea" stroke-width="3"/>
+<text x="650" y="456" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#edf2ff">Feed-forward / MLP</text>
+<text x="650" y="526" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">Norms + residuals</text>
+<text x="650" y="565" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">Position information</text>
+<text x="650" y="642" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">Repeated × N layers</text>
+<rect x="875" y="285" width="170" height="170" rx="14" fill="#14243e" stroke="#f4e54b" stroke-width="3"/>
+<text x="960" y="350" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#edf2ff">Final</text>
+<text x="960" y="393" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#edf2ff">norm</text>
+<rect x="1215" y="285" width="180" height="170" rx="14" fill="#35213e" stroke="#ff2d9a" stroke-width="3"/>
+<text x="1305" y="343" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#edf2ff">LLM head</text>
+<text x="1305" y="388" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#edf2ff">Linear</text>
+<text x="1305" y="420" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#edf2ff">projection</text>
+<path d="M180 370 H225" fill="none" stroke="#b7c5e6" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M430 370 H480" fill="none" stroke="#b7c5e6" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M815 370 H870" fill="none" stroke="#b7c5e6" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1045 370 H1210" fill="none" stroke="#b7c5e6" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1395 370 H1430" fill="none" stroke="#b7c5e6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1093" y="305" width="46" height="130" rx="14" fill="#f4e54b" stroke="#f4e54b" stroke-width="3"/>
+<path d="M1102 327 H1130" fill="none" stroke="#5d581c" stroke-width="3"/>
+<path d="M1102 348 H1130" fill="none" stroke="#5d581c" stroke-width="3"/>
+<path d="M1102 369 H1130" fill="none" stroke="#5d581c" stroke-width="3"/>
+<path d="M1102 390 H1130" fill="none" stroke="#5d581c" stroke-width="3"/>
+<path d="M1102 411 H1130" fill="none" stroke="#5d581c" stroke-width="3"/>
+<text x="1505" y="359" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#edf2ff">Vocabulary</text>
+<text x="1505" y="397" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#edf2ff">logits</text>
+<path d="M960 460 V500" fill="none" stroke="#f4e54b" stroke-width="3"/>
+<text x="960" y="535" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#f4e54b">Last layer</text>
+<text x="960" y="566" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#f4e54b">before the head</text>
+<path d="M1116 440 V640 H1210 V675" fill="none" stroke="#f4e54b" stroke-width="3"/>
+<text x="1210" y="713" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#f4e54b">Final hidden state</text>
+<text x="1210" y="752" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#b7c5e6">One contextual vector per token</text>
+<text x="340" y="752" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#b7c5e6">Simplified architecture; details vary by model.</text>
+</svg>
