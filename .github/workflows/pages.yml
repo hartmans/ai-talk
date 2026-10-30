@@ -27,12 +27,16 @@ jobs:
         run: |
           mkdir -p site
           cp talk.html site/index.html
-          # Copy every image in the repo, preserving relative paths, so
-          # images added later (including in subdirectories) are published
-          # without changing this workflow.
+          # Copy every static asset in the repo — images, audio, video,
+          # stylesheets — preserving relative paths, so assets added
+          # later (including in subdirectories) are published without
+          # changing this workflow.
           find . -type f \
             \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \
-               -o -name '*.gif' -o -name '*.webp' -o -name '*.svg' \) \
+               -o -name '*.gif' -o -name '*.webp' -o -name '*.svg' \
+               -o -name '*.ogg' -o -name '*.mp3' -o -name '*.wav' \
+               -o -name '*.m4a' -o -name '*.mp4' -o -name '*.webm' \
+               -o -name '*.css' \) \
             -not -path './.git/*' -not -path './site/*' -print0 |
           while IFS= read -r -d '' f; do
             rel="${f#./}"
